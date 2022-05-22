@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Win </title>
+<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open();
+var background = new sjs.Image("Images/cat.gif")
+background.setSize(sjs.getWidth(),sjs.getHeight())
+var win_text = new sjs.Text("Yay you won!! Try and make your own level now!", 28, "blue")
+win_text.centerH()
+var menuBtn = new sjs.Button("Menu", function(){
+window.location = "gameindex.html"
+})
+menuBtn.center()
+var score_txt = new sjs.Text("Score: 0", 21, "green");
+score_txt.setText("Score: " +localStorage.getItem("score"))
+score_txt.offset(400,40)
+}
+</script>
+</head>
+<body onload="start()">
+<h1> You Win </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>

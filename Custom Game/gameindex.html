@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Menu </title>
+<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open();
+var background = new sjs.Image("Images/beans.gif")
+background.setSize(sjs.getWidth(),sjs.getHeight())
+var menu_text = new sjs.Text("Mittens hearts beans", 28, "purple")
+menu_text.centerH()
+var info_text = new sjs.Text("Use arrow keys to move. Avoid the vac and eat beans!",20,"red")
+info_text.centerH().offset(0,50)
+var designBtn = new sjs.Button("Design Level", function(){
+window.location = "game.html"
+})
+designBtn.center()
+var level1Btn = new sjs.Button("Level 1", function(){
+window.location = "level.html";
+});
+level1Btn.center().offset(0, 50);
+var creater_text = new sjs.Text("Made by Murr Hodges",20,"black")
+creater_text.center().bottom()
+}
+</script>
+</head>
+<body onload="start()">
+<h1> Platform Game </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>
